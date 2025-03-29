@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AIT Industries</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="">
+        <div id="navbar"></div>
+
+        <div class="bgHero min-h-[calc(100vh-80px)] p-5 w-full flex items-center justify-center flex-col">
+            <div class="md:pt-10">
+
+                <h1 id="animated-text"
+                    class="md:text-7xl text-4xl leading-tight !leading-tight opacity-0 slidein [--slidein-delay:200ms] max-w-[70rem] font-semibold text-center uppercase">
+                    AIT Industries
+                </h1>
+                <h2 class="text-lg font-medium mb-6 text-center capitalize  opacity-0 slidein [--slidein-delay:600ms]">
+                    Introduce AIT Industries, highlight key strengths, and engage visitors. </h2>
+
+                <div class="flex opacity-0 slidein [--slidein-delay:800ms] items-center justify-center md:mt-8 mt-5">
+                    <a href="#aboutUs"
+                        class="bg-[#000] text-white px-10 py-3 rounded-full font-medium hover:bg-[#000]/80 transition-all duration-500 capitalize">Explore
+                        Our Legacy</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class=" md:text-start text-center max-w-7xl mx-auto w-full p-5 md:mt-14 mt-8">
+            <h2 class="font-semibold text-2xl uppercase mb-3">Our Legacy & Expertise</h2>
+            <p class=" md:text-lg">Alfa Impex Tanning Industries (AIT Industries) has its roots in a family legacy that
+                dates back to 1952, when it was first established as Skin Suppliers. What began as a
+                modest business exporting dry salted hides soon evolved into a fully integrated
+                tannery specializing in finished leather production. Over the decades, AIT
+                Industries has embraced innovation while staying true to its expertise in sourcing the
+                finest raw leather. Today, the company processes over 300,000 square feet of
+                premium finished leather per month, catering to the demands of some of the most
+                well-known global brands. <br><br>
+                With its tannery located in Ranipet, India, AIT Industries has been a trusted supplier
+                to Bata and Tata for over 20 years. The company takes pride in its ability to
+                maintain strict quality control—ensuring that every piece of leather is produced
+                from carefully selected raw hides. By combining traditional craftsmanship with
+                state-of-the-art machinery, AIT Industries delivers technically superior and
+                commercially viable leather that meets international standards. Despite the evolution
+                of the industry, the company’s unwavering commitment to quality and ethical,
+                sustainable tanning practices remains its core strength. </p>
+        </div>
+
+        <div id="footer"></div>
+
+
+
+
+
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="./Docs/Javascripts/global.js"></script>
+    <script src="./Docs/Javascripts/footer.js"></script>
+    <script src="./Docs/Javascripts/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                loop: true,
+                navigation: {
+                    nextEl: ".nextBtn",
+                    prevEl: ".prevBtn",
+                },
+            });
+        });
+
+        // counter
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            function animateCounter(counter) {
+                let target = +counter.getAttribute("data-target");
+                gsap.fromTo(counter,
+                    { innerText: 0 },
+                    {
+                        innerText: target,
+                        duration: 2,
+                        snap: { innerText: 1 },
+                        ease: "power3.out",
+                        onUpdate: function () {
+                            counter.innerText = Math.floor(counter.innerText) + "+"; // Ensure "+" stays
+                        }
+                    }
+                );
+            }
+
+            ScrollTrigger.create({
+                trigger: "#counter-section",
+                start: "top 75%",
+                once: true,
+                onEnter: () => {
+                    document.querySelectorAll(".counter").forEach(animateCounter);
+                }
+            });
+        });
+
+        // images
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from(".box", {
+                y: 50,   // Move up from 50px
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2, // Delay between each item
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".imagesSection",
+                    start: "top 80%",
+                    once: true, // Only run once
+                }
+            });
+        });
+
+        // items
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from(".itembox", {
+                y: 50,   // Move up from 50px
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2, // Delay between each item
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".itemSection",
+                    start: "top 80%",
+                    once: true, // Only run once
+                }
+            });
+        });
+
+        // blog
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from(".blogbox", {
+                y: 50,   // Move up from 50px
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2, // Delay between each item
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".blogSection",
+                    start: "top 80%",
+                    once: true, // Only run once
+                }
+            });
+        });
+
+        // text
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const text = document.querySelector("#animated-text");
+            const characters = text.innerText.split(""); // Split text into characters
+
+            text.innerHTML = ""; // Clear existing text
+            characters.forEach((char, index) => {
+                let span = document.createElement("span");
+                span.innerText = char;
+                span.style.opacity = "0"; // Hide initially
+                text.appendChild(span);
+            });
+
+            gsap.to("#animated-text span", {
+                opacity: 1,
+                y: 0,
+                duration: 0.001,
+                stagger: 0.05, // Delay between each letter
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#animated-text",
+                    start: "top 80%",
+                    once: true,
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
