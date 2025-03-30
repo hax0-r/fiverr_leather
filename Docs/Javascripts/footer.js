@@ -5,12 +5,12 @@ footer.innerHTML = `
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <!--Grid-->
                 <div
-                    class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
+                    class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 md:gap-8 md:py-10  py-5 max-sm:max-w-sm max-sm:mx-auto ">
                     <div class="mb-10 lg:col-span-2 lg:mb-0">
                         <a href="./index.html" class="flex justify-center lg:justify-start">
                             <img src="./Docs/Images/logo.png" class="h-20" alt="logo">
                         </a>
-                        <p class="py-8 text-sm text-gray-800 lg:max-w-xs text-center lg:text-left"> Excellence in
+                        <p class="pt-8 text-sm text-gray-800 lg:max-w-xs text-center lg:text-left"> Excellence in
                             Leather Tanning Since 1952</p>
                     </div>
                     <!--End Col-->
@@ -23,6 +23,8 @@ footer.innerHTML = `
                                     Us</a></li>
                             <li class="mb-4"><a href="./products.html"
                                     class="text-gray-600 hover:underline">Products</a></li>
+                            <li class="mb-4"><a href="./contactUs.html"
+                                    class="text-gray-600 hover:underline">Contact Us</a></li>
                         </ul>
                     </div>
 

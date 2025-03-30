@@ -102,5 +102,17 @@ a {
 /* =========== */
 
 .bgHero {
-  background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.247)), url(../Images/Home-Page-images/homebg.jpg) no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/hero.jpg) no-repeat center/cover;
+}
+
+.bgProducts {
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/products.jpg) no-repeat center/cover;
+}
+
+.bgAbout {
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/about.jpg) no-repeat center/cover;
+}
+
+.bgContact {
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/contact-us.jpg) no-repeat center/cover;
 }
