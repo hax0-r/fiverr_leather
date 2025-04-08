@@ -102,7 +102,7 @@ a {
 /* =========== */
 
 .bgHero {
-  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/img\ \(13\).jpg) no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/img\ \(7\).jpg) no-repeat center/cover;
 }
 
 .bgProducts {
@@ -110,9 +110,9 @@ a {
 }
 
 .bgAbout {
-  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/img\ \(41\).jpg) no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/img\ \(8\).jpeg) no-repeat center/cover;
 }
 
 .bgContact {
-  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/img\ \(12\).jpg) no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.685)), url(../Images/img\ \(11\).jpg) no-repeat center/cover;
 }
